@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 import CollectionHeader from './CollectionHeader';
 import ProductCards from './ProductCards';

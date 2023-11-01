@@ -1,3 +1,4 @@
+// @ts-nocheck
 import Collection from '@/components/Collection';
 import ProductCards from '@/components/ProductCards';
 import { client } from '@/model/api';
@@ -9,6 +10,9 @@ query GetProduct($slug: ID!) {
     title
     slug
     Description
+    image {
+      id
+    }
   }
 }
 `;

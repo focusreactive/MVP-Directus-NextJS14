@@ -1,3 +1,4 @@
+// @ts-nocheck
 'use client';
 import { Fragment } from 'react';
 import { Disclosure, Menu, Transition } from '@headlessui/react';

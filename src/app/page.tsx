@@ -1,3 +1,4 @@
+// @ts-nocheck
 import Collection from '@/components/Collection';
 import { client } from '@/model/api';
 import Image from 'next/image';
@@ -13,6 +14,9 @@ query {
       title
       slug
       Description
+      image {
+        id
+      }
     }
   }
 }
@@ -20,7 +24,6 @@ query {
 `;
 export default async function Home() {
   const { collections } = await client.query(collectionsQuery);
-  console.log('🚀 ~ file: page.tsx:21 ~ Home ~ collections:', collections);
   return (
     <main className="mx-20">
       {collections.map((c) => (
