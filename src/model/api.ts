@@ -11,6 +11,7 @@ export const client = {
       },
       method: 'POST',
       body: JSON.stringify({ query, variables }),
+      next: { revalidate: 60 },
     }).then((r) => r.json());
 
     return resp.data;
