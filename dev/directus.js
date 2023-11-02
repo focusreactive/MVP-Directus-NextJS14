@@ -25,5 +25,9 @@ module.exports = async function (data) {
     collection: `collection: ${product.collection}`,
     email: user.email,
   };
+  const acceptValue = JSON.stringify({ status: 'accepted', ...payload });
+  const rejectValue = JSON.stringify({ status: 'rejected' });
+  payload.acceptValue = acceptValue;
+  payload.rejectValue = rejectValue;
   return { payload };
 };

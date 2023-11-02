@@ -5,9 +5,9 @@ const REVIEW_FLOW =
 
 export async function POST(request: Request) {
   const data = await request.json();
-  const payload = data.payload;
-  const actions = data.payload.actions;
-  const value = JSON.parse(actions[0].value);
+  const payload = JSON.stringify(data.payload);
+  const actions = payload.actions;
+  const value = actions[0].value;
 
   console.log('🚀 ~ file: route.js:4 ~ POST ~ body:', value);
   await fetch(REVIEW_FLOW, {
@@ -15,7 +15,7 @@ export async function POST(request: Request) {
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(value),
+    body: value,
   });
   return Response.json({ text: 'thanks for your decision' });
 }
