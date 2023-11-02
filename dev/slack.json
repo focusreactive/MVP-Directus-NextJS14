@@ -1,0 +1,77 @@
+{
+  "blocks": [
+    {
+      "type": "header",
+      "text": {
+        "type": "plain_text",
+        "text": "Attention: New Product Submission 🚥",
+        "emoji": true
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "We have received *a new product submission* on our website. It is crucial that we review and take action on this submission promptly. Please review the details and either *approve* or *dismiss* the submission. Your swift response is highly appreciated to ensure efficient processing and provide the best user experience."
+      }
+    },
+    {
+      "type": "section",
+      "fields": [
+        {
+          "type": "plain_text",
+          "text": "{{slack_payload.payload.name}}",
+          "emoji": true
+        },
+        {
+          "type": "plain_text",
+          "text": "{{slack_payload.payload.title}}",
+          "emoji": true
+        },
+        {
+          "type": "plain_text",
+          "text": "{{slack_payload.payload.description}}",
+          "emoji": true
+        },
+        {
+          "type": "plain_text",
+          "text": "{{slack_payload.payload.category}}",
+          "emoji": true
+        },
+        {
+          "type": "plain_text",
+          "text": "{{slack_payload.payload.email}}",
+          "emoji": true
+        }
+      ]
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "actions",
+      "elements": [
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "emoji": true,
+            "text": "🍏 Approve"
+          },
+          "style": "primary",
+          "value": "click_me_123"
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "emoji": true,
+            "text": "🙅 Reject"
+          },
+          "style": "danger",
+          "value": "click_me_123"
+        }
+      ]
+    }
+  ]
+}

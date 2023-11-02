@@ -1,50 +1,4 @@
-POST https://artcryption-poc.directus.app/graphql
-Content-Type: application/json
-Authorization: Bearer kBgJQb-Eqvq71MUJdzDn65xUfIFzcCDx
-X-REQUEST-TYPE: GraphQL
-
-query {
-  Products {
-    title
-  }
-}
-
-
-###
-
-POST https://artcryption-poc.directus.app/flows/trigger/902dc52a-2fb8-4b65-bc4e-c6804b5b101f
-Content-Type: application/json
-
 {
-  "name": "test",
-  "email": "reg@usul.su"
-}
-
-
-###
-
-POST https://eox5ge5cp0ztfqf.m.pipedream.net
-Content-Type: application/json
-
-{
-  "name": "lalalal",
-}
-
-
-###
-POST https://hooks.slack.com/actions/T784R3J6R/6158782767664/3Vkg9uxY7NDiXVjOuOQ4EMgf
-Content-Type: application/json
-
-{
-  "text": "Hello world"
-}
-
-
-###
-POST http://localhost:3000/api/review
-
-{
-  "payload": {
   "type": "block_actions",
   "user": {
     "id": "UQKHERRPW",
@@ -155,12 +109,10 @@ POST http://localhost:3000/api/review
         "text": ":no_good: Reject",
         "emoji": true
       },
-      "value": "{\"first-name\":\"Oleg\",\"last-name\":\"Proskurin\",\"title\":\"lalalalalalla\",\"collection\":\"abstract-art\",\"email\":\"oleg@gitnation.org\",\"country\":\"US\",\"phone-number\":\"234234234234\",\"description\":\"lalalalalalla\"}",
+      "value": "click_me_123",
       "style": "danger",
       "type": "button",
       "action_ts": "1698935719.470787"
     }
   ]
-}
-
 }
