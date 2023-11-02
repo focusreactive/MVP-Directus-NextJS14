@@ -3,11 +3,12 @@ const REVIEW_FLOW =
 
 export async function POST(request: Request) {
   const data = await request.json();
+  console.log("🚀 ~ file: route.ts:6 ~ POST ~ data:", data)
   const payload = JSON.parse(data.payload);
+  console.log("🚀 ~ file: route.ts:8 ~ POST ~ payload:", payload)
   const actions = payload.actions;
   const value = actions[0].value;
 
-  console.log('🚀 ~ file: route.js:4 ~ POST ~ body:', value);
   await fetch(REVIEW_FLOW, {
     method: 'POST',
     headers: {
