@@ -6,7 +6,7 @@ const REVIEW_FLOW =
 export async function POST(request: Request) {
   console.log('🚀 got request');
   console.log('🚀 got body', request.body);
-  const data = await request.json();
+  const data = await request.text();
   console.log('🚀 got data');
   const payload = JSON.parse(data.payload);
   console.log('🚀 got payload', payload);
