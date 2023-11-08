@@ -3,18 +3,14 @@
 export const revalidate = 10;
 
 const REVIEW_FLOW =
-  'https://artcryption-poc.directus.app/flows/trigger/fb6de8f5-95fe-4aed-a06d-0a6071e98278';
+  'https://artcryption-poc.directus.app/flows/trigger/6617d16f-5832-4609-ae4f-2787d7b6258b';
 
 export async function POST(request: Request) {
-  console.log('🚀 got request');
-  console.log('🚀 got body', request.body);
   const data = await request.formData();
-  console.log('🚀 got data', data);
-  console.log('🚀 got data data.get(payload)', data.get('payload'));
   const payload = JSON.parse(data.get('payload'));
-  console.log('🚀 got payload', payload);
   const actions = payload.actions;
   const value = actions[0].value;
+  console.log("🚀 ~ file: route.ts:18 ~ POST ~ value:", value)
 
   await fetch(REVIEW_FLOW, {
     method: 'POST',
