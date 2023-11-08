@@ -9,7 +9,7 @@ export async function POST(request: Request) {
   console.log('🚀 got request');
   console.log('🚀 got body', request.body);
   const data = await request.text();
-  console.log('🚀 got data');
+  console.log('🚀 got data', data);
   const payload = JSON.parse(data.payload);
   console.log('🚀 got payload', payload);
   const actions = payload.actions;
