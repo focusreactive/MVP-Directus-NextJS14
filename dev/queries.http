@@ -39,6 +39,14 @@ Content-Type: application/json
   "text": "Hello world"
 }
 
+###
+
+POST https://usulpro.requestcatcher.com/test
+
+{
+  "text": "Hello world"
+}
+
 
 ###
 ### POST https://mvp-directus-next-js-14.vercel.app/api/review
