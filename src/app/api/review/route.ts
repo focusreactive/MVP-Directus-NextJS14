@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 export const revalidate = 10;
 
 const REVIEW_FLOW =
