@@ -1,5 +1,5 @@
 // @ts-nocheck
-export default function ProductCards({ products }) {
+export default function ProductCards({ products, isFull }) {
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
@@ -24,6 +24,13 @@ export default function ProductCards({ products }) {
               <h3 className="mt-4 text-[24px] text-gray-900">
                 {product.title}
               </h3>
+              {isFull ? (
+                <>
+                  <p>{`status: ${product.status}`}</p>
+                  <p>{`collection: ${product.collection?.title}`}</p>
+                  <p>{`type: ${product.collection?.type}`}</p>
+                </>
+              ) : null}
               <div
                 className="mt-1 text-lg font-medium text-gray-900"
                 dangerouslySetInnerHTML={{ __html: product.Description }}

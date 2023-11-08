@@ -10,6 +10,11 @@ query GetProduct($slug: ID!) {
     title
     slug
     Description
+    status
+    collection {
+      title
+      type
+    }
     image {
       id
     }
@@ -21,7 +26,7 @@ export default async function Product({ params }) {
   const { product } = await client.query(productQuery, { slug });
   return (
     <div>
-      <ProductCards products={[product]} />
+      <ProductCards products={[product]} isFull />
     </div>
   );
 }

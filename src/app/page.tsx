@@ -10,7 +10,7 @@ query {
     slug
     type
     date_created
-    products {
+    products(filter: {status: {_eq: "published"}}) {
       title
       slug
       Description
