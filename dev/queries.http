@@ -12,12 +12,11 @@ query {
 
 ###
 
-POST https://artcryption-poc.directus.app/flows/trigger/902dc52a-2fb8-4b65-bc4e-c6804b5b101f
+POST https://artcryption-poc.directus.app/flows/trigger/6617d16f-5832-4609-ae4f-2787d7b6258b
 Content-Type: application/json
 
 {
-  "name": "test",
-  "email": "reg@usul.su"
+  "value": "accept focus"
 }
 
 
