@@ -4,11 +4,12 @@ const REVIEW_FLOW =
   'https://artcryption-poc.directus.app/flows/trigger/fb6de8f5-95fe-4aed-a06d-0a6071e98278';
 
 export async function POST(request: Request) {
-  console.log('🚀 ~ file: route.ts:5 ~ POST ~ request:', request);
+  console.log('🚀 got request');
+  console.log('🚀 got body', request.body);
   const data = await request.json();
-  console.log('🚀 ~ file: route.ts:6 ~ POST ~ data:', data);
+  console.log('🚀 got data');
   const payload = JSON.parse(data.payload);
-  console.log('🚀 ~ file: route.ts:8 ~ POST ~ payload:', payload);
+  console.log('🚀 got payload', payload);
   const actions = payload.actions;
   const value = actions[0].value;
 
